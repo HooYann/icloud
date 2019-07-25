@@ -1,4 +1,4 @@
-package org.yann.icloud.hello;
+package org.yann.icloud.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

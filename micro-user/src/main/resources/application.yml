@@ -9,8 +9,8 @@ spring:
       ddl-auto: none
   datasource:
     platform: h2
-    schema: classpath:schema.sql
-    data: classpath:data.sql
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
 
 logging:
   root: DEBUG
