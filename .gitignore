@@ -1,0 +1,29 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+target/
+
+# eclipse
+.settings/
+.classpath
+.project
+logs/
+
+*.log
+
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+*velocity.log*
+
+/*/.mvn/
+/*/mvnw.cmd
+/*/mvnw
+/mjgf-biz-comment/.springBeans
+/*.pdb
