@@ -1,7 +1,9 @@
 server:
-  port: 18000
+  port: 18010
 
 spring:
+  application:
+    name: micro-user
   jpa:
     generate-ddl: true
     show-sql: true
@@ -11,6 +13,15 @@ spring:
     platform: h2
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      my-metadata: you see see you, one day day de.
 
 logging:
   root: DEBUG

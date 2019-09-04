@@ -11,6 +11,9 @@
     <modules>
         <module>micro-user</module>
         <module>micro-movie</module>
+        <module>micro-eureka</module>
+        <module>micro-eureka-ha</module>
+        <module>micro-auth</module>
     </modules>
 
     <parent>

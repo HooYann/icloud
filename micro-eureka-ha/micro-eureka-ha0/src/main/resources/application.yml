@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: micro-eureka-ha0
+  profiles:
+    active: peer0
+
+---
+spring:
+  profiles: peer0
+
+server:
+  port: 18001
+
+eureka:
+  instance:
+    hostname: peer0
+  client:
+    #register-with-eureka: false
+    #fetch-registry: false
+    service-url:
+      defaultZone: http://peer1:18002/eureka/
