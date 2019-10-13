@@ -1,0 +1,16 @@
+server:
+  port: 18029
+
+logging:
+  root: DEBUG
+
+spring:
+  application:
+    name: micro-movie-feign-upload
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+  instance:
+    prefer-ip-address: true

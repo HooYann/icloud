@@ -10,17 +10,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>micro-movie</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>micro-movie-ribbon</module>
+        <module>micro-movie-feign</module>
+        <module>micro-movie-0</module>
+        <module>micro-movie-feign-manual</module>
+        <module>micro-movie-ribbon-custom</module>
+        <module>micro-movie-ribbon-without-eureka</module>
+        <module>micro-movie-feign-custom</module>
+        <module>micro-movie-feign-upload</module>
+    </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <!-- Feign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>

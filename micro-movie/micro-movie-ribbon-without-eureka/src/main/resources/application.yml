@@ -1,0 +1,13 @@
+server:
+  port: 18026
+
+logging:
+  root: DEBUG
+
+spring:
+  application:
+    name: micro-movie-ribbon-without-eureka
+
+micro-user:
+  ribbon:
+    listOfServers: localhost:18010, localhost:18011

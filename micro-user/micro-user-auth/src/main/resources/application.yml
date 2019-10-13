@@ -1,0 +1,31 @@
+server:
+  port: 18013
+
+spring:
+  application:
+    name: micro-user
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      my-metadata: you see see you, one day day de.
+
+logging:
+  root: DEBUG
+  org.h2: DEBUG
+  org.hibernate: DEBUG
+  org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
