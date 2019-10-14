@@ -20,6 +20,11 @@
         <module>micro-movie-ribbon-without-eureka</module>
         <module>micro-movie-feign-custom</module>
         <module>micro-movie-feign-upload</module>
+        <module>micro-movie-hystrix-ribbon</module>
+        <module>micro-movie-hystrix-feign</module>
+        <module>micro-movie-hystrix-feign-fallback-factory</module>
+        <module>micro-movie-hystrix-dashboard</module>
+        <module>micro-movie-hystrix-turbine</module>
     </modules>
 
     <dependencies>

@@ -1,12 +1,12 @@
 server:
-  port: 18031
+  port: 18041
 
 logging:
   root: DEBUG
 
 spring:
   application:
-    name: micro-movie-feign-custom
+    name: micro-movie-hystrix-feign
 
 eureka:
   client:
@@ -14,3 +14,7 @@ eureka:
       defaultZone: http://localhost:18000/eureka/
   instance:
     prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true

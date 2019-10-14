@@ -1,12 +1,12 @@
 server:
-  port: 18031
+  port: 18040
 
 logging:
   root: DEBUG
 
 spring:
   application:
-    name: micro-movie-feign-custom
+    name: micro-movie-hystrix-ribbon
 
 eureka:
   client:

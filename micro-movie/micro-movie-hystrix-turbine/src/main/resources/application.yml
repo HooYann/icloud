@@ -1,0 +1,20 @@
+server:
+  port: 18045
+
+logging:
+  root: DEBUG
+
+spring:
+  application:
+    name: micro-movie-hystrix-turbine
+
+eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:18000/eureka/
+    instance:
+      prefer-ip-address: true
+
+turbine:
+  app-config: micro-movie-hystrix-ribbon, micro-movie-hystrix-feign
+  cluster-name-expression: "'default'"

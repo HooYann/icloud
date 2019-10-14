@@ -1,5 +1,5 @@
 server:
-  port: 18025
+  port: 18021
 
 logging:
   root: DEBUG
