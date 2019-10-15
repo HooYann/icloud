@@ -1,0 +1,24 @@
+server:
+  port: 18052
+
+spring:
+  application:
+    name: zuul-filter
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes, filters
+
+#过滤器的禁用
+zuul:
+  FormBodyWrapperFilter:
+    pre:
+      disabled: true
+

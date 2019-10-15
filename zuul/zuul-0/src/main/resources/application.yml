@@ -1,0 +1,85 @@
+server:
+  port: 18050
+
+spring:
+  application:
+    name: zuul0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes, filters
+
+zuul:
+  ignore-services: '*' # service1, service2
+  routes:
+    micro-movie-ribbon: /user/**
+
+#zuul:
+  #routes:
+    #user-route:
+      #service-id: micro-user
+      #pah: /user/*
+
+#zuul:
+  #routes:
+    #user-route:
+      #url: http://localhost:18010/
+      #pah: /user/*
+
+#zuul:
+  #routes:
+    #user-route:
+      #service-id: micro-user
+      #pah: /user/*
+#ribbon:
+  #eureka:
+    #enabled: false
+#micro-user:
+  #ribbon:
+    #listOfServers: localhost:18010, localhost:18011
+
+
+#路由前缀
+#zuul:
+  #prefix: /api
+  #strip-prefix: false
+  #routes:
+    #micro-user: /user/*
+
+#zuul:
+  #routes:
+    #micro-user:
+      #path: /user/*
+      #strip-prefix: false
+
+#忽略某些路径
+#zuul:
+  #ignorePatterns: /**/admin/**
+  #routes:
+    #micro-user: /user/**
+
+#本地转发
+#zuul:
+  #routes:
+    #path: /path-a/**
+    #url: forward:/path-b
+
+
+#安全与Header
+#zuul:
+  #routes:
+    #micro-user:
+      #path: /users/**
+      #sensitive-headers: Cookie, Set-Cookie, Authorization
+      #url: https://downstream
+
+#忽略header
+#zuul:
+  #ignored-headers: Header1, Header2

@@ -1,0 +1,33 @@
+server:
+  port: 18051
+
+spring:
+  application:
+    name: zuul-upload
+  http:
+      max-file-size: 2000Mb
+      max-request-size: 2500Mb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+
+hystrix:
+  command:
+    default:
+      excecution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes, filters
+

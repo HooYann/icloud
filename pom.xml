@@ -13,6 +13,8 @@
         <module>micro-movie</module>
         <module>micro-eureka</module>
         <module>micro-eureka-ha</module>
+        <module>zuul</module>
+        <module>config</module>
     </modules>
 
     <parent>

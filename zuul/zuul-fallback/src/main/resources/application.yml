@@ -1,0 +1,19 @@
+server:
+  port: 18054
+
+spring:
+  application:
+    name: zuul-fallback
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes, filters
+
+
