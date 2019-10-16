@@ -1,0 +1,20 @@
+server:
+  port: 18068
+spring:
+  application:
+    name: config-server-eureka
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/HooYann/icloud
+          username: user
+          password: 123456
+          search-paths: config/config-repository
+          default-label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/

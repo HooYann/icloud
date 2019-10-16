@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: micro-foo
+
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        service-id: config-server-eureka
+        enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:18000/eureka/

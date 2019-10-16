@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: micro-foo
+
+  cloud:
+    config:
+      uri: http://localhost:18060/
+      profile: dev
+      label: master

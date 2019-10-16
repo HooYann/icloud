@@ -8,6 +8,20 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/
-          usernmae: user
-          password: password
+          uri: https://github.com/HooYann/icloud
+          username: user
+          password: 123456
+          search-paths: config/config-repository
+          default-label: master
+
+          #repos:
+          #  simple: https://github.com/simple/config-repo
+          #  special:
+          #    pattern: special*/dev*, *special*/dev*
+          #    uri:https://github.com/special/config-repo
+          #  local:
+          #    pattern: local*
+          #    uri: file:/home/configsvc/config-repo
+
+# http://localhost:18060/micro-foo-dev.properties
+# http://localhost:18060/micro-foo/dev
